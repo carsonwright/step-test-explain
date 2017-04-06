@@ -1,0 +1,5 @@
+
+> step-test-explain@0.2.0 test /Users/carsonnwright/Projects/step-test-explain
+> node test.js
+
+[{"name":"Speak","examples":[{"name":"Say Hello","example":"function (){\n  this.lib.say(\"Hello\");\n}"},{"name":"Say Goodbye","example":"function (){\n  this.lib.say(\"Goodbye\");\n}"},{"name":"Mock Console","example":"function (){\n  var t = this;\n  console.log = function(data){\n    t.log = data;\n  };\n}"},{"name":"Speak","example":"function (){\n  this.lib.speak();\n}"},{"name":"Should have said Hello and Goodbye","example":"function (){\n  var log = JSON.stringify(this.log);\n  var e = JSON.stringify([\"Hello\", \"Goodbye\"]);\n  this.ok(log == e);\n}"}]}]

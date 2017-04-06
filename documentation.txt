@@ -1,0 +1,44 @@
+
+> step-test-explain@0.2.0 test /Users/carsonnwright/Projects/step-test-explain
+> node test.js
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+
+Lib Name:  Speak 
+
+============================================================
+Example Name:  Say Hello
+Example:    function (){
+  this.lib.say("Hello");
+}
+------------------------------------------------------------ 
+
+Example Name:  Say Goodbye
+Example:    function (){
+  this.lib.say("Goodbye");
+}
+------------------------------------------------------------ 
+
+Example Name:  Mock Console
+Example:    function (){
+  var t = this;
+  console.log = function(data){
+    t.log = data;
+  };
+}
+------------------------------------------------------------ 
+
+Example Name:  Speak
+Example:    function (){
+  this.lib.speak();
+}
+------------------------------------------------------------ 
+
+Example Name:  Should have said Hello and Goodbye
+Example:    function (){
+  var log = JSON.stringify(this.log);
+  var e = JSON.stringify(["Hello", "Goodbye"]);
+  this.ok(log == e);
+}
+------------------------------------------------------------ 
+
